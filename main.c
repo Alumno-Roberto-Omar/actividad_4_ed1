@@ -4,6 +4,7 @@
 struct personaje{
     char nombre[20];
     char tipo[20];
+    char especie[20];
     int fuerza;
     int salud;
 };
@@ -11,7 +12,6 @@ struct personaje{
 struct personaje personajes[ELEMENTOS];
 
 void mostrar(int n, char arreglo[]) {
-    //Mostrar en pantalla n veces arreglo
     for(int a=0;a<n;a++){
         printf("Repetici%cn %i: %s\n",162,a+1,arreglo);
     }
@@ -55,7 +55,6 @@ int main(){
             printf("INGRESE LOS DATOS DEL ARREGLO:\n");
             printf("Ingrese los datos del arreglo(cadena): ");
             fflush(stdin);
-            //scanf("%s",&cadena);
             fgets(cadena, sizeof(cadena), stdin);
             printf("\nMOSTRAR DATOS DEL ARREGLO:\n");
             printf("Arreglo(cadena): %s",cadena);
@@ -63,9 +62,6 @@ int main(){
             printf("Cuantas veces quieres ver el arreglo: ");
             scanf("%i",&z);
             mostrar(z,cadena);
-            /*for(w=0;w<z;w++){
-                printf("Repetici%cn %i: %s\n",162,w+1,cadena);
-            }*/
             break;
         }
     case 3:
@@ -79,6 +75,8 @@ int main(){
                 fflush(stdin);
                 printf("Tipo: ");
                 scanf("%s",&personajes[y].tipo);
+                printf("Especie: ");
+                scanf("%s",&personajes[y].especie);
                 fflush(stdin);
                 printf("Fuerza: ");
                 scanf("%i",&personajes[y].fuerza);
@@ -94,6 +92,7 @@ int main(){
                 printf("PERSONAJE %i\n",y+1);
                 printf("Nombre: %s\n",personajes[y].nombre);
                 printf("Tipo: %s\n",personajes[y].tipo);
+                printf("Especie: %s\n",personajes[y].especie);
                 printf("Fuerza: %i\n",personajes[y].fuerza);
                 printf("Salud: %i\n",personajes[y].salud);
                 printf("\n");
