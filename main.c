@@ -19,7 +19,7 @@ void mostrar(int n, char arreglo[]) {
 
 int main(){
     int opcion,x,y,w,z,arreglo[5],sumatoria=0,promedio=0;
-    char cadena[5];
+    char cadena[20];
     printf("SELECCIONE UNA OPCION:\n 1. SUMA Y PROMEDIO\n 2. MOSTRAR ARREGLO\n 3. ESTRUCTURA CON PERSONAJES\n\n");
     printf("Ingrese una de las opciones(1, 2 o 3): ");
     scanf("%i",&opcion);
@@ -54,11 +54,11 @@ int main(){
             printf("OPCION 2. MOSTRAR ARREGLO\n");
             printf("INGRESE LOS DATOS DEL ARREGLO:\n");
             printf("Ingrese los datos del arreglo(cadena): ");
-            scanf("%s",&cadena);
             fflush(stdin);
+            //scanf("%s",&cadena);
+            fgets(cadena, sizeof(cadena), stdin);
             printf("\nMOSTRAR DATOS DEL ARREGLO:\n");
             printf("Arreglo(cadena): %s",cadena);
-            fflush(stdin);
             printf("\n\nMOSTRAR EL ARREGLO N VECES:\n");
             printf("Cuantas veces quieres ver el arreglo: ");
             scanf("%i",&z);
